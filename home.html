@@ -1,16 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./styles/login.css" />
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./styles/login.css" />
+</head>
+
+<body class="ff-outfit">
+  <header class="mx-auto p-6">
+    <nav class="flex justify-between items-center border-b border-stone-300 pb-2">
+      <div class="flex justify-center items-center gap-2">
+        <img src="./assets/Group.png" alt="logo" class="w-12" />
+        <div>
+          <p class="font-bold">$<span id="balance">45000</span></p>
+          <p class="text-stone-500">Available Balance</p>
+        </div>
+      </div>
+      <button class="btn btn-primary">Log Out</button>
+    </nav>
+  </header>
+
+  <main class="mx-auto px-6">
+    <section class="space-y-6">
+      <h1 class="text-2xl font-bold">Welcome to Payooo!</h1>
+      <p class="text-stone-500">
+        Enjoy easy and convenient financial services with us. <br />
+        Cashout charge is low and fast!
+      </p>
+      <!-- actions -->
+      <div class="grid grid-cols-3 gap-4">
+        <div class="p-4 border border-stone-300 rounded-lg flex flex-col items-center justify-center gap-2">
+          <img src="./assets/wallet1.png" alt="wallet icon" />
+          <p class="text-stone-500 text-sm">Add Money</p>
+        </div>
+        <div class="p-4 border border-stone-300 rounded-lg flex flex-col items-center justify-center gap-2">
+          <img src="./assets/send1.png" alt="wallet icon" />
+          <p class="text-stone-500 text-sm">Cashout</p>
+        </div>
+        <div class="p-4 border border-stone-300 rounded-lg flex flex-col items-center justify-center gap-2">
+          <img src="./assets/money1.png" alt="wallet icon" />
+          <p class="text-stone-500 text-sm">Transfer Money</p>
+        </div>
+        <div class="p-4 border border-stone-300 rounded-lg flex flex-col items-center justify-center gap-2">
+          <img src="./assets/bonus1.png" alt="wallet icon" />
+          <p class="text-stone-500 text-sm">Get Bonus</p>
+        </div>
+        <div class="p-4 border border-stone-300 rounded-lg flex flex-col items-center justify-center gap-2">
+          <img src="./assets/purse1.png" alt="wallet icon" />
+          <p class="text-stone-500 text-sm">Pay Bill</p>
+        </div>
+        <div class="p-4 border border-stone-300 rounded-lg flex flex-col items-center justify-center gap-2">
+          <img src="./assets/transaction1.png" alt="wallet icon" />
+          <p class="text-stone-500 text-sm">Transactions</p>
+        </div>
+      </div>
+    </section>
+    <!-- add money form -->
+    <section class="bg-gray-100">
+      <h2 class="text-xl font-bold">Add Money</h2>
+      <div class="hero">
+        <div class="hero-content">
+          <div class="card bg-base-100 w-full">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label" for="bank-name">
+                  <span class="label-text">Select A Bank</span>
+                </label>
+                <select name="" id="bank-name" class="select select-bordered rounded-3xl">
+                  <!-- <option value="" disabled selected>Select bank</option> -->
+                  <option value="bkash">Bkash</option>
+                  <option value="nagad">Nagad</option>
+                  <option value="rocket">Rocket</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Bank Account Number</span>
+                </label>
+                <input type="number" placeholder="Enter 11 digit account number"
+                  class="input input-bordered rounded-3xl" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount to Add</span>
+                </label>
+                <input type="number" placeholder="Add amount to diposit" class="input input-bordered rounded-3xl"
+                  required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input type="password" placeholder="Enter 4 digit pin number" class="input input-bordered rounded-3xl"
+                  required />
+              </div>
+              <div class="form-control">
+                <button id="login-btn" class="btn w-full rounded-3xl bg-blue-500 text-white">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
